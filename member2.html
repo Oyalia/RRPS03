@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Персональна сторінка Backend розробника (Додатковий акаунт 2), група ІПЗм-26-2. Проєкт RRPS03.">
+  <title>Додатковий акаунт 2 | Backend & Architecture | RRPS03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0a1a;
+      --card-bg: rgba(27, 19, 48, 0.75);
+      --card-border: rgba(168, 85, 247, 0.25);
+      --primary: #a855f7;
+      --primary-light: #d8b4fe;
+      --accent: #f43f5e;
+      --text: #faf5ff;
+      --text-dim: #a1a1aa;
+      --badge-bg: rgba(168, 85, 247, 0.15);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 10%, rgba(168, 85, 247, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 90%, rgba(244, 63, 94, 0.18) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 36px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    }
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(168, 85, 247, 0.35);
+      flex-shrink: 0;
+    }
+    .header-info h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      background: linear-gradient(90deg, #faf5ff, #e9d5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-info .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--badge-bg);
+      color: var(--primary-light);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+    .badge-accent {
+      background: rgba(244, 63, 94, 0.15);
+      color: #fda4af;
+      border-color: rgba(244, 63, 94, 0.3);
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+    .card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #faf5ff;
+    }
+    .card p {
+      color: var(--text-dim);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .feature-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(168, 85, 247, 0.15);
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .feature-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #f3e8ff;
+    }
+    .api-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px dashed rgba(168, 85, 247, 0.3);
+      border-radius: 10px;
+      padding: 16px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #e9d5ff;
+      margin-top: 14px;
+      line-height: 1.8;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header-card">
+      <div class="avatar">DA2</div>
+      <div class="header-info">
+        <h1>Додатковий акаунт 2</h1>
+        <p style="color: #d8b4fe; font-size: 15px;">Backend Engineer & Database Architect</p>
+        <div class="meta-row">
+          <span class="badge">Група: ІПЗм-26-2</span>
+          <span class="badge badge-accent">Проєкт: RRPS03</span>
+          <span class="badge">Гілка: feature/member-2</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2> Роль у проєкті: Серверна частина та бази даних</h2>
+      <p>
+        Відповідаю за розробку RESTful API, взаємодію з базою даних, автентифікацію
+        користувачів та оптимізацію швидкодії серверних запитів.
+      </p>
+      <div class="grid-2">
+        <div class="feature-item">
+          <h3>REST API Сервіси</h3>
+          <p>Проєктування ендпоінтів та серіалізація структурованих JSON даних.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Реляційні моделі</h3>
+          <p>Оптимізація індексів та захист транзакцій у базі даних.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2> Специфікація API ендпоінтів</h2>
+      <div class="api-box">
+        GET &nbsp;/api/v1/team/members &nbsp;➔ 200 OK [JSON]<br>
+        POST /api/v1/team/projects &nbsp;➔ 201 Created<br>
+        GET &nbsp;/api/v1/team/status &nbsp;&nbsp;&nbsp;➔ 200 OK { health: "100%" }
+      </div>
+    </section>
+
+    <footer>
+      Лабораторна робота з розподілених систем версіонування • 2026
+    </footer>
+  </div>
+</body>
+</html>
