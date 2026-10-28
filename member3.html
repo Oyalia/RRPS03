@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Персональна сторінка інженера QA та DevOps (Додатковий акаунт 3), група ІПЗм-26-2. Проєкт RRPS03.">
+  <title>Додатковий акаунт 3 | QA Automation & DevOps | RRPS03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090e1a;
+      --card-bg: rgba(18, 27, 49, 0.75);
+      --card-border: rgba(59, 130, 246, 0.25);
+      --primary: #3b82f6;
+      --primary-light: #93c5fd;
+      --accent: #10b981;
+      --text: #f8fafc;
+      --text-dim: #94a3b8;
+      --badge-bg: rgba(59, 130, 246, 0.15);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 10%, rgba(59, 130, 246, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 90%, rgba(16, 185, 129, 0.15) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 36px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    }
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+      flex-shrink: 0;
+    }
+    .header-info h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      background: linear-gradient(90deg, #f8fafc, #dbeafe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-info .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--badge-bg);
+      color: var(--primary-light);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    .badge-accent {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6ee7b7;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+    .card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #f8fafc;
+    }
+    .card p {
+      color: var(--text-dim);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .feature-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .feature-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #e0f2fe;
+    }
+    .stats-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .stat-card {
+      flex: 1;
+      min-width: 140px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary-light);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header-card">
+      <div class="avatar">DA3</div>
+      <div class="header-info">
+        <h1>Додатковий акаунт 3</h1>
+        <p style="color: #93c5fd; font-size: 15px;">QA Automation & DevOps Specialist</p>
+        <div class="meta-row">
+          <span class="badge">Група: ІПЗм-26-2</span>
+          <span class="badge badge-accent">Проєкт: RRPS03</span>
+          <span class="badge">Гілка: feature/member-3</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2> Роль у проєкті: Контроль якості та автоматизація</h2>
+      <p>
+        Відповідаю за написання автоматизованих тестів, моніторинг стабільності кодової бази, 
+        налаштування CI/CD процесів перевірки коду перед злиттям гілок у репозиторій.
+      </p>
+      <div class="grid-2">
+        <div class="feature-item">
+          <h3>Автоматизоване тестування</h3>
+          <p>Покриття коду Unit та E2E тестами для запобігання регресіям.</p>
+        </div>
+        <div class="feature-item">
+          <h3>CI/CD Pipelines</h3>
+          <p>Автоматичні перевірки лінтерами та валідаторами при створенні Pull Request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2> Метрики якості та тестів</h2>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">HTML5 валідність</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4 / 4</div>
+          <div class="stat-label">Гілки синхронізовано</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Критичних помилок</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Лабораторна робота з розподілених систем версіонування • 2026
+    </footer>
+  </div>
+</body>
+</html>
