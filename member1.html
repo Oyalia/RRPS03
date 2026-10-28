@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Персональна сторінка розробника Frontend та UI/UX (Додатковий акаунт 1), група ІПЗм-26-2. Проєкт RRPS03.">
+  <title>Додатковий акаунт 1 | UI/UX & Frontend | RRPS03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #061317;
+      --card-bg: rgba(13, 33, 40, 0.75);
+      --card-border: rgba(20, 184, 166, 0.25);
+      --primary: #14b8a6;
+      --primary-light: #5eead4;
+      --accent: #06b6d4;
+      --text: #f0fdfa;
+      --text-dim: #94a3b8;
+      --badge-bg: rgba(20, 184, 166, 0.15);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 10%, rgba(20, 184, 166, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 90%, rgba(6, 182, 212, 0.18) 0px, transparent 50%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 36px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    }
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: #042f2e;
+      box-shadow: 0 10px 25px rgba(20, 184, 166, 0.35);
+      flex-shrink: 0;
+    }
+    .header-info h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      background: linear-gradient(90deg, #f0fdfa, #ccfbf1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-info .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--badge-bg);
+      color: var(--primary-light);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+    }
+    .badge-accent {
+      background: rgba(6, 182, 212, 0.15);
+      color: #67e8f9;
+      border-color: rgba(6, 182, 212, 0.3);
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+    .card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #f0fdfa;
+    }
+    .card p {
+      color: var(--text-dim);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .feature-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(20, 184, 166, 0.15);
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .feature-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #e6fffa;
+    }
+    .palette-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .color-swatch {
+      flex: 1;
+      min-width: 100px;
+      height: 50px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      padding: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #000;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header-card">
+      <div class="avatar">DA1</div>
+      <div class="header-info">
+        <h1>Додатковий акаунт 1</h1>
+        <p style="color: #99f6e4; font-size: 15px;">Frontend Engineer & UI/UX Designer</p>
+        <div class="meta-row">
+          <span class="badge">Група: ІПЗм-26-2</span>
+          <span class="badge badge-accent">Проєкт: RRPS03</span>
+          <span class="badge">Гілка: feature/member-1</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2> Роль у проєкті: Дизайн-система та інтерфейс</h2>
+      <p>
+        Відповідаю за розробку клієнтського інтерфейсу, проєктування палітри кольорів, 
+        створення адаптивних веб-компонентів та оптимізацію взаємодії користувача з додатком.
+      </p>
+      <div class="grid-2">
+        <div class="feature-item">
+          <h3>Адаптивна верстка</h3>
+          <p>Мобільна адаптація компонентів за допомогою сучасних стандартів Flexbox та CSS Grid.</p>
+        </div>
+        <div class="feature-item">
+          <h3>UI Kit & Дизайн-токени</h3>
+          <p>Створення єдиного стилю елементів: типографіка, картки, кнопки та мікроанімації.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2> Фірмова кольорова палітра</h2>
+      <div class="palette-row">
+        <div class="color-swatch" style="background: #14b8a6;">#14B8A6</div>
+        <div class="color-swatch" style="background: #06b6d4;">#06B6D4</div>
+        <div class="color-swatch" style="background: #5eead4;">#5EEAD4</div>
+        <div class="color-swatch" style="background: #0f766e; color: #fff;">#0F766E</div>
+      </div>
+    </section>
+
+    <footer>
+      Лабораторна робота з розподілених систем версіонування • 2026
+    </footer>
+  </div>
+</body>
+</html>
