@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Головна сторінка командного веб-проєкту RRPS03. Група ІПЗм-26-2. Навігація по персональних сторінках членів команди.">
+  <title>Командний проєкт RRPS03 | Головна</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(22, 30, 49, 0.7);
+      --card-hover: rgba(30, 41, 67, 0.9);
+      --border: rgba(99, 102, 241, 0.2);
+      --border-hover: rgba(129, 140, 248, 0.5);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #6366f1;
+      --accent: #a855f7;
+      --radius: 18px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 10% 15%, rgba(99, 102, 241, 0.2) 0px, transparent 50%),
+        radial-gradient(at 90% 85%, rgba(168, 85, 247, 0.18) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(20, 184, 166, 0.08) 0px, transparent 60%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+    }
+
+    .badge-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #a5b4fc;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(32px, 5vw, 46px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 17px;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Grid layout for team cards */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .member-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .member-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-hover);
+      background: var(--card-hover);
+      box-shadow: 0 20px 35px -8px rgba(99, 102, 241, 0.25);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .avatar-lead { background: linear-gradient(135deg, #6366f1, #a855f7); }
+    .avatar-m1 { background: linear-gradient(135deg, #14b8a6, #06b6d4); color: #042f2e; }
+    .avatar-m2 { background: linear-gradient(135deg, #a855f7, #f43f5e); }
+    .avatar-m3 { background: linear-gradient(135deg, #3b82f6, #10b981); }
+
+    .branch-tag {
+      font-family: monospace;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+    }
+
+    .member-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .member-role {
+      font-size: 13px;
+      font-weight: 600;
+      color: #818cf8;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .member-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+
+    .card-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 13px;
+      font-weight: 600;
+      color: #e2e8f0;
+      transition: color 0.2s;
+    }
+
+    .member-card:hover .card-action {
+      color: #a5b4fc;
+    }
+
+    .arrow-icon {
+      transition: transform 0.2s ease;
+    }
+
+    .member-card:hover .arrow-icon {
+      transform: translateX(4px);
+    }
+
+    /* Stats strip */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .stat-box {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #f8fafc;
+    }
+
+    .stat-lbl {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-muted);
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: #818cf8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero" id="main-hero">
+      <div class="badge-hero">
+        <span>●</span> Командний репозиторій RRPS03 • Група ІПЗм-26-2
+      </div>
+      <h1>Розподілені системи версіонування</h1>
+      <p>
+        Головна навігаційна сторінка проєкту. Кожен учасник команди розробляє власну 
+        сторінку в окремій гілці Git згідно з розподілом обов'язків.
+      </p>
+    </header>
+
+    <main class="team-grid" id="team-grid">
+      <!-- Свистанюк Н.О. -->
+      <a href="svystaniuk.html" class="member-card" id="card-svystaniuk">
+        <div>
+          <div class="card-top">
+            <div class="avatar avatar-lead">СН</div>
+            <span class="branch-tag">feature/svystaniuk</span>
+          </div>
+          <h2 class="member-name">Свистанюк Н.О.</h2>
+          <span class="member-role">Team Lead & Full-Stack</span>
+          <p class="member-desc">
+            Керівник команди, архітектура репозиторію, координація гілок та огляд проєкту.
+          </p>
+        </div>
+        <div class="card-action">
+          <span>Перейти до сторінки</span>
+          <span class="arrow-icon">→</span>
+        </div>
+      </a>
+
+      <!-- Додатковий акаунт 1 -->
+      <a href="member1.html" class="member-card" id="card-member1">
+        <div>
+          <div class="card-top">
+            <div class="avatar avatar-m1">DA1</div>
+            <span class="branch-tag">feature/member-1</span>
+          </div>
+          <h2 class="member-name">Додатковий акаунт 1</h2>
+          <span class="member-role" style="color: #5eead4;">Frontend & UI/UX</span>
+          <p class="member-desc">
+            Розробка адаптивного клієнтського інтерфейсу, UI Kit та палітри стилів.
+          </p>
+        </div>
+        <div class="card-action">
+          <span>Перейти до сторінки</span>
+          <span class="arrow-icon">→</span>
+        </div>
+      </a>
+
+      <!-- Додатковий акаунт 2 -->
+      <a href="member2.html" class="member-card" id="card-member2">
+        <div>
+          <div class="card-top">
+            <div class="avatar avatar-m2">DA2</div>
+            <span class="branch-tag">feature/member-2</span>
+          </div>
+          <h2 class="member-name">Додатковий акаунт 2</h2>
+          <span class="member-role" style="color: #f43f5e;">Backend & Database</span>
+          <p class="member-desc">
+            Проєктування RESTful API, взаємодія з базою даних та безпека системи.
+          </p>
+        </div>
+        <div class="card-action">
+          <span>Перейти до сторінки</span>
+          <span class="arrow-icon">→</span>
+        </div>
+      </a>
+
+      <!-- Додатковий акаунт 3 -->
+      <a href="member3.html" class="member-card" id="card-member3">
+        <div>
+          <div class="card-top">
+            <div class="avatar avatar-m3">DA3</div>
+            <span class="branch-tag">feature/member-3</span>
+          </div>
+          <h2 class="member-name">Додатковий акаунт 3</h2>
+          <span class="member-role" style="color: #10b981;">QA & DevOps</span>
+          <p class="member-desc">
+            Автоматизоване тестування, моніторинг стабільності та налаштування CI/CD.
+          </p>
+        </div>
+        <div class="card-action">
+          <span>Перейти до сторінки</span>
+          <span class="arrow-icon">→</span>
+        </div>
+      </a>
+    </main>
+
+    <section class="stats-strip">
+      <div class="stat-box">
+        <div class="stat-val">4</div>
+        <div class="stat-lbl">Члени команди</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">4</div>
+        <div class="stat-lbl">Гілки проєкту</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">ІПЗм-26-2</div>
+        <div class="stat-lbl">Академічна група</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">Синхронізація Git</div>
+      </div>
+    </section>
+
+    <footer>
+      Репозиторій: <a href="https://github.com/Oyalia/RRPS03" target="_blank" rel="noopener noreferrer">github.com/Oyalia/RRPS03</a> • 2026
+    </footer>
+  </div>
+</body>
+</html>
